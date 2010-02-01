@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		EA57A37E111515F30080D0C1 /* DrinkCLI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57A370111515440080D0C1 /* DrinkCLI.m */; };
+		EA57A390111517F70080D0C1 /* DrinkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* DrinkCore.framework */; };
+		EA57A40A111528E80080D0C1 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EA57A3FD111528E80080D0C1 /* JSON.h */; };
+		EA57A40B111528E80080D0C1 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EA57A3FE111528E80080D0C1 /* NSObject+SBJSON.h */; };
+		EA57A40C111528E80080D0C1 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57A3FF111528E80080D0C1 /* NSObject+SBJSON.m */; };
+		EA57A40D111528E80080D0C1 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EA57A400111528E80080D0C1 /* NSString+SBJSON.h */; };
+		EA57A40E111528E80080D0C1 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57A401111528E80080D0C1 /* NSString+SBJSON.m */; };
+		EA57A40F111528E80080D0C1 /* SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EA57A402111528E80080D0C1 /* SBJSON.h */; };
+		EA57A410111528E80080D0C1 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57A403111528E80080D0C1 /* SBJSON.m */; };
+		EA57A411111528E80080D0C1 /* SBJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = EA57A404111528E80080D0C1 /* SBJsonBase.h */; };
+		EA57A412111528E80080D0C1 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57A405111528E80080D0C1 /* SBJsonBase.m */; };
+		EA57A413111528E80080D0C1 /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = EA57A406111528E80080D0C1 /* SBJsonParser.h */; };
+		EA57A414111528E80080D0C1 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57A407111528E80080D0C1 /* SBJsonParser.m */; };
+		EA57A415111528E80080D0C1 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = EA57A408111528E80080D0C1 /* SBJsonWriter.h */; };
+		EA57A416111528E80080D0C1 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57A409111528E80080D0C1 /* SBJsonWriter.m */; };
+		EA715854111683E000959463 /* DrinkUser.h in Headers */ = {isa = PBXBuildFile; fileRef = EA715852111683E000959463 /* DrinkUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA715855111683E000959463 /* DrinkUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA715853111683E000959463 /* DrinkUser.m */; };
+		EA7158DA1116965C00959463 /* DrinkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* DrinkCore.framework */; };
+		EA7158E3111696E400959463 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7158E2111696E400959463 /* main.m */; };
+		EA7158E5111696F300959463 /* Drink.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7158E4111696F300959463 /* Drink.xib */; };
+		EA7158E81116971200959463 /* DrinkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7158E71116971200959463 /* DrinkAppDelegate.m */; };
+		EAEFDCD81115140C00058244 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEFDCCE1115140C00058244 /* AsyncSocket.h */; };
+		EAEFDCD91115140C00058244 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEFDCCF1115140C00058244 /* AsyncSocket.m */; };
+		EAEFDCDA1115140C00058244 /* DrinkConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEFDCD01115140C00058244 /* DrinkConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAEFDCDB1115140C00058244 /* DrinkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEFDCD11115140C00058244 /* DrinkConnection.m */; };
+		EAEFDCDC1115140C00058244 /* DrinkConnectionInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEFDCD21115140C00058244 /* DrinkConnectionInterface.h */; settings = {ATTRIBUTES = (); }; };
+		EAEFDCDD1115140C00058244 /* DrinkConnectionInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEFDCD31115140C00058244 /* DrinkConnectionInterface.m */; };
+		EAEFDCDE1115140C00058244 /* DrinkMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEFDCD41115140C00058244 /* DrinkMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAEFDCDF1115140C00058244 /* DrinkMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEFDCD51115140C00058244 /* DrinkMachine.m */; };
+		EAEFDCE01115140C00058244 /* DrinkWebSocketInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEFDCD61115140C00058244 /* DrinkWebSocketInterface.h */; settings = {ATTRIBUTES = (); }; };
+		EAEFDCE11115140C00058244 /* DrinkWebSocketInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEFDCD71115140C00058244 /* DrinkWebSocketInterface.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA57A37C111515CF0080D0C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = DrinkCore;
+		};
+		EA7158D51116964100959463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* DrinkCore */;
+			remoteInfo = DrinkCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* DrinkCore_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCore_Prefix.pch; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* DrinkCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DrinkCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		EA57A36E111515440080D0C1 /* DrinkCLI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCLI_Prefix.pch; sourceTree = "<group>"; };
+		EA57A370111515440080D0C1 /* DrinkCLI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkCLI.m; sourceTree = "<group>"; };
+		EA57A378111515C80080D0C1 /* drink-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "drink-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA57A3FD111528E80080D0C1 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		EA57A3FE111528E80080D0C1 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		EA57A3FF111528E80080D0C1 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		EA57A400111528E80080D0C1 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		EA57A401111528E80080D0C1 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		EA57A402111528E80080D0C1 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		EA57A403111528E80080D0C1 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		EA57A404111528E80080D0C1 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		EA57A405111528E80080D0C1 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		EA57A406111528E80080D0C1 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		EA57A407111528E80080D0C1 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		EA57A408111528E80080D0C1 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		EA57A409111528E80080D0C1 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		EA715852111683E000959463 /* DrinkUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkUser.h; sourceTree = "<group>"; };
+		EA715853111683E000959463 /* DrinkUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkUser.m; sourceTree = "<group>"; };
+		EA7158CF1116963800959463 /* Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7158D11116963800959463 /* Drink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Drink-Info.plist"; sourceTree = "<group>"; };
+		EA7158E2111696E400959463 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA7158E4111696F300959463 /* Drink.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Drink.xib; sourceTree = "<group>"; };
+		EA7158E61116971200959463 /* DrinkAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkAppDelegate.h; sourceTree = "<group>"; };
+		EA7158E71116971200959463 /* DrinkAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkAppDelegate.m; sourceTree = "<group>"; };
+		EAEFDCCE1115140C00058244 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		EAEFDCCF1115140C00058244 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		EAEFDCD01115140C00058244 /* DrinkConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkConnection.h; sourceTree = "<group>"; };
+		EAEFDCD11115140C00058244 /* DrinkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkConnection.m; sourceTree = "<group>"; };
+		EAEFDCD21115140C00058244 /* DrinkConnectionInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkConnectionInterface.h; sourceTree = "<group>"; };
+		EAEFDCD31115140C00058244 /* DrinkConnectionInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkConnectionInterface.m; sourceTree = "<group>"; };
+		EAEFDCD41115140C00058244 /* DrinkMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkMachine.h; sourceTree = "<group>"; };
+		EAEFDCD51115140C00058244 /* DrinkMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkMachine.m; sourceTree = "<group>"; };
+		EAEFDCD61115140C00058244 /* DrinkWebSocketInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkWebSocketInterface.h; sourceTree = "<group>"; };
+		EAEFDCD71115140C00058244 /* DrinkWebSocketInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkWebSocketInterface.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA57A376111515C80080D0C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA57A390111517F70080D0C1 /* DrinkCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7158CD1116963800959463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7158DA1116965C00959463 /* DrinkCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* DrinkCore.framework */,
+				EA57A378111515C80080D0C1 /* drink-cli */,
+				EA7158CF1116963800959463 /* Drink.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* DrinkCore */ = {
+			isa = PBXGroup;
+			children = (
+				EA7158E11116967400959463 /* Drink */,
+				EA57A3741115154A0080D0C1 /* DrinkCLI */,
+				08FB77AEFE84172EC02AAC07 /* DrinkCore */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				EA7158D11116963800959463 /* Drink-Info.plist */,
+			);
+			name = DrinkCore;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* DrinkCore */ = {
+			isa = PBXGroup;
+			children = (
+				EA57A3F1111528A60080D0C1 /* External Sources */,
+				EAEFDCCD111513E400058244 /* Classes */,
+				089C1665FE841158C02AAC07 /* Resources */,
+			);
+			path = DrinkCore;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E79907B2D74100F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EA57A36E111515440080D0C1 /* DrinkCLI_Prefix.pch */,
+				32DBCF5E0370ADEE00C91783 /* DrinkCore_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		EA57A3741115154A0080D0C1 /* DrinkCLI */ = {
+			isa = PBXGroup;
+			children = (
+				EA57A370111515440080D0C1 /* DrinkCLI.m */,
+			);
+			path = DrinkCLI;
+			sourceTree = "<group>";
+		};
+		EA57A3F1111528A60080D0C1 /* External Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EA57A3FC111528E80080D0C1 /* JSON */,
+				EAEFDCCE1115140C00058244 /* AsyncSocket.h */,
+				EAEFDCCF1115140C00058244 /* AsyncSocket.m */,
+			);
+			name = "External Sources";
+			sourceTree = "<group>";
+		};
+		EA57A3FC111528E80080D0C1 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				EA57A3FD111528E80080D0C1 /* JSON.h */,
+				EA57A3FE111528E80080D0C1 /* NSObject+SBJSON.h */,
+				EA57A3FF111528E80080D0C1 /* NSObject+SBJSON.m */,
+				EA57A400111528E80080D0C1 /* NSString+SBJSON.h */,
+				EA57A401111528E80080D0C1 /* NSString+SBJSON.m */,
+				EA57A402111528E80080D0C1 /* SBJSON.h */,
+				EA57A403111528E80080D0C1 /* SBJSON.m */,
+				EA57A404111528E80080D0C1 /* SBJsonBase.h */,
+				EA57A405111528E80080D0C1 /* SBJsonBase.m */,
+				EA57A406111528E80080D0C1 /* SBJsonParser.h */,
+				EA57A407111528E80080D0C1 /* SBJsonParser.m */,
+				EA57A408111528E80080D0C1 /* SBJsonWriter.h */,
+				EA57A409111528E80080D0C1 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		EA7158E11116967400959463 /* Drink */ = {
+			isa = PBXGroup;
+			children = (
+				EA7158E2111696E400959463 /* main.m */,
+				EA7158E4111696F300959463 /* Drink.xib */,
+				EA7158E61116971200959463 /* DrinkAppDelegate.h */,
+				EA7158E71116971200959463 /* DrinkAppDelegate.m */,
+			);
+			path = Drink;
+			sourceTree = "<group>";
+		};
+		EAEFDCCD111513E400058244 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EAEFDCD01115140C00058244 /* DrinkConnection.h */,
+				EAEFDCD11115140C00058244 /* DrinkConnection.m */,
+				EAEFDCD21115140C00058244 /* DrinkConnectionInterface.h */,
+				EAEFDCD31115140C00058244 /* DrinkConnectionInterface.m */,
+				EAEFDCD41115140C00058244 /* DrinkMachine.h */,
+				EAEFDCD51115140C00058244 /* DrinkMachine.m */,
+				EAEFDCD61115140C00058244 /* DrinkWebSocketInterface.h */,
+				EAEFDCD71115140C00058244 /* DrinkWebSocketInterface.m */,
+				EA715852111683E000959463 /* DrinkUser.h */,
+				EA715853111683E000959463 /* DrinkUser.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAEFDCD81115140C00058244 /* AsyncSocket.h in Headers */,
+				EAEFDCDA1115140C00058244 /* DrinkConnection.h in Headers */,
+				EAEFDCDC1115140C00058244 /* DrinkConnectionInterface.h in Headers */,
+				EAEFDCDE1115140C00058244 /* DrinkMachine.h in Headers */,
+				EAEFDCE01115140C00058244 /* DrinkWebSocketInterface.h in Headers */,
+				EA57A40A111528E80080D0C1 /* JSON.h in Headers */,
+				EA57A40B111528E80080D0C1 /* NSObject+SBJSON.h in Headers */,
+				EA57A40D111528E80080D0C1 /* NSString+SBJSON.h in Headers */,
+				EA57A40F111528E80080D0C1 /* SBJSON.h in Headers */,
+				EA57A411111528E80080D0C1 /* SBJsonBase.h in Headers */,
+				EA57A413111528E80080D0C1 /* SBJsonParser.h in Headers */,
+				EA57A415111528E80080D0C1 /* SBJsonWriter.h in Headers */,
+				EA715854111683E000959463 /* DrinkUser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* DrinkCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "DrinkCore" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrinkCore;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = DrinkCore;
+			productReference = 8DC2EF5B0486A6940098B216 /* DrinkCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA57A377111515C80080D0C1 /* drink-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA57A37F111516040080D0C1 /* Build configuration list for PBXNativeTarget "drink-cli" */;
+			buildPhases = (
+				EA57A375111515C80080D0C1 /* Sources */,
+				EA57A376111515C80080D0C1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA57A37D111515CF0080D0C1 /* PBXTargetDependency */,
+			);
+			name = "drink-cli";
+			productName = "drink-cli";
+			productReference = EA57A378111515C80080D0C1 /* drink-cli */;
+			productType = "com.apple.product-type.tool";
+		};
+		EA7158CE1116963800959463 /* Drink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA7158D41116963900959463 /* Build configuration list for PBXNativeTarget "Drink" */;
+			buildPhases = (
+				EA7158CB1116963800959463 /* Resources */,
+				EA7158CC1116963800959463 /* Sources */,
+				EA7158CD1116963800959463 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA7158D61116964100959463 /* PBXTargetDependency */,
+			);
+			name = Drink;
+			productName = Drink;
+			productReference = EA7158CF1116963800959463 /* Drink.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "DrinkOSX" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* DrinkCore */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* DrinkCore */,
+				EA57A377111515C80080D0C1 /* drink-cli */,
+				EA7158CE1116963800959463 /* Drink */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7158CB1116963800959463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7158E5111696F300959463 /* Drink.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAEFDCD91115140C00058244 /* AsyncSocket.m in Sources */,
+				EAEFDCDB1115140C00058244 /* DrinkConnection.m in Sources */,
+				EAEFDCDD1115140C00058244 /* DrinkConnectionInterface.m in Sources */,
+				EAEFDCDF1115140C00058244 /* DrinkMachine.m in Sources */,
+				EAEFDCE11115140C00058244 /* DrinkWebSocketInterface.m in Sources */,
+				EA57A40C111528E80080D0C1 /* NSObject+SBJSON.m in Sources */,
+				EA57A40E111528E80080D0C1 /* NSString+SBJSON.m in Sources */,
+				EA57A410111528E80080D0C1 /* SBJSON.m in Sources */,
+				EA57A412111528E80080D0C1 /* SBJsonBase.m in Sources */,
+				EA57A414111528E80080D0C1 /* SBJsonParser.m in Sources */,
+				EA57A416111528E80080D0C1 /* SBJsonWriter.m in Sources */,
+				EA715855111683E000959463 /* DrinkUser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA57A375111515C80080D0C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA57A37E111515F30080D0C1 /* DrinkCLI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7158CC1116963800959463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7158E3111696E400959463 /* main.m in Sources */,
+				EA7158E81116971200959463 /* DrinkAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA57A37D111515CF0080D0C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* DrinkCore */;
+			targetProxy = EA57A37C111515CF0080D0C1 /* PBXContainerItemProxy */;
+		};
+		EA7158D61116964100959463 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* DrinkCore */;
+			targetProxy = EA7158D51116964100959463 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DrinkCore_Prefix.pch;
+				INFOPLIST_FILE = DrinkCore/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				PRODUCT_NAME = DrinkCore;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DrinkCore_Prefix.pch;
+				INFOPLIST_FILE = DrinkCore/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				PRODUCT_NAME = DrinkCore;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		EA57A37A111515C80080D0C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "drink-cli";
+			};
+			name = Debug;
+		};
+		EA57A37B111515C80080D0C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "drink-cli";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		EA7158D21116963900959463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Drink-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Drink;
+			};
+			name = Debug;
+		};
+		EA7158D31116963900959463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Drink-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Drink;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "DrinkCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "DrinkOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA57A37F111516040080D0C1 /* Build configuration list for PBXNativeTarget "drink-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA57A37A111515C80080D0C1 /* Debug */,
+				EA57A37B111515C80080D0C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA7158D41116963900959463 /* Build configuration list for PBXNativeTarget "Drink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA7158D21116963900959463 /* Debug */,
+				EA7158D31116963900959463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

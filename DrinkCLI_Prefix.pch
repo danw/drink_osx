@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DrinkCLI' target in the 'DrinkCLI' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,4 @@
+.DS_Store
+build
+DrinkOSX.xcodeproj/*.pbxuser
+DrinkOSX.xcodeproj/*.mode1v3
