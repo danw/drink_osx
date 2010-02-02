@@ -8,6 +8,7 @@
 
 #import "DrinkConnection.h"
 #import "DrinkWebSocketInterface.h"
+#import "DrinkTestInterface.h"
 #import "DrinkMachine.h"
 
 @implementation DrinkConnection
@@ -27,6 +28,10 @@
 			conn = [[DrinkWebSocketInterface alloc] initWithURL:url
 													   delegate:self];
 		}
+        else if ([[url scheme] isEqualToString:@"test"])
+        {
+            conn = [[DrinkTestInterface alloc] initWithURL:url delegate:self];
+        }
 		else
 		{
 			NSLog(@"Unknown url scheme!");
