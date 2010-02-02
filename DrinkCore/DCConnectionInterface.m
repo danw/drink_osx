@@ -1,15 +1,15 @@
 //
-//  DrinkConnectionInterface.m
-//  libdrink
+//  DCConnectionInterface.m
+//  DrinkCore
 //
 //  Created by Dan Willemsen on 1/28/10.
 //  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
-#import "DrinkConnectionInterface.h"
+#import "DCConnectionInterface.h"
 
 
-@implementation DrinkConnectionInterface
+@implementation DCConnectionInterface
 
 -(id)initWithURL:(NSURL*)url
 {

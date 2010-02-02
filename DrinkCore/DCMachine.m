@@ -1,15 +1,15 @@
 //
-//  DrinkMachine.m
-//  libdrink
+//  DCMachine.m
+//  DrinkCore
 //
 //  Created by Dan Willemsen on 1/28/10.
 //  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
-#import "DrinkMachine.h"
+#import "DCMachine.h"
 
 
-@implementation DrinkMachine
+@implementation DCMachine
 
 +(BOOL)accessInstanceVariablesDirectly
 {
@@ -67,7 +67,7 @@
 
 -(NSString*)description
 {
-    return [NSString stringWithFormat:@"<DrinkMachine \"%@\" (%@)>", name, machineID];
+    return [NSString stringWithFormat:@"<DCMachine \"%@\" (%@)>", name, machineID];
 }
 
 @end

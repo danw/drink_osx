@@ -7,14 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <DrinkCore/DrinkConnection.h>
+#import <DrinkCore/DCConnection.h>
 
 @interface DrinkAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
-    DrinkConnection *conn;
+    DCConnection *conn;
 }
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet DrinkConnection *conn;
+@property (assign) IBOutlet DCConnection *conn;
 
 @end

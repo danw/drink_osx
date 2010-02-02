@@ -1,26 +1,26 @@
 //
-//  DrinkConnection.h
-//  libdrink
+//  DCConnection.h
+//  DrinkCore
 //
 //  Created by Dan Willemsen on 1/28/10.
 //  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "DrinkConnectionInterface.h"
-#import "DrinkUser.h"
+#import "DCConnectionInterface.h"
+#import "DCUser.h"
 
-@interface DrinkConnection : NSObject {
-	DrinkConnectionInterface *conn;
+@interface DCConnection : NSObject {
+	DCConnectionInterface *conn;
 	BOOL connected;
 
 	NSMutableArray *machines;
-    DrinkUser *currentUser;
+    DCUser *currentUser;
 }
 
 @property (readonly) BOOL connected;
 @property (readonly) NSArray *machines;
-@property (readonly) DrinkUser *currentUser;
+@property (readonly) DCUser *currentUser;
 
 -(id)initWithURL:(NSURL*)url;
 
@@ -29,7 +29,7 @@
 
 @end
 
-@interface DrinkConnection (DrinkConnectionInterfaceDelegate)
+@interface DCConnection (DrinkConnectionInterfaceDelegate)
 
 -(void)drinkServerDidConnect;
 -(void)drinkServerDidDisconnect;

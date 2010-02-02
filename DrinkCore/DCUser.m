@@ -1,15 +1,15 @@
 //
-//  DrinkUser.m
-//  DrinkOSX
+//  DCUser.m
+//  DrinkCore
 //
 //  Created by Dan Willemsen on 1/31/10.
 //  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
-#import "DrinkUser.h"
+#import "DCUser.h"
 
 
-@implementation DrinkUser
+@implementation DCUser
 
 -(id)initWithServerData:(NSDictionary*)data
 {
@@ -36,7 +36,7 @@
 
 -(NSString*)description
 {
-    return [NSString stringWithFormat:@"<DrinkUser %@%@ %@ credits>", 
+    return [NSString stringWithFormat:@"<DCUser %@%@ %@ credits>", 
             username, 
             admin ? @"(admin)" : @"", 
             credits];

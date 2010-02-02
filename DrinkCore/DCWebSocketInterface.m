@@ -1,15 +1,15 @@
 //
-//  DrinkWebSocketInterface.m
-//  libdrink
+//  DCWebSocketInterface.m
+//  DrinkCore
 //
 //  Created by Dan Willemsen on 1/28/10.
 //  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
-#import "DrinkWebSocketInterface.h"
+#import "DCWebSocketInterface.h"
 #import "JSON.h"
 
-@interface DrinkWebSocketInterface (Private)
+@interface DCWebSocketInterface (Private)
 -(void)handleMessage:(NSDictionary*)dict;
 -(void)handleEvent:(NSString*)event data:(NSDictionary*)data;
 -(void)handleResponse:(NSString*)r_id status:(NSString*)status data:(id)data;
@@ -17,11 +17,11 @@
 -(void)writeRequest:(NSString*)request withID:(NSString*)r_id args:(id)args;
 @end
 
-@implementation DrinkWebSocketInterface
+@implementation DCWebSocketInterface
 
 #pragma mark Public Functions
 
--(id)initWithURL:(NSURL*)host delegate:(DrinkConnection*)d
+-(id)initWithURL:(NSURL*)host delegate:(DCConnection*)d
 {
 	if (self = [super init])
 	{

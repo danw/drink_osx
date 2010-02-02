@@ -1,17 +1,17 @@
 //
-//  DrinkConnection.m
-//  libdrink
+//  DCConnection.m
+//  DrinkCore
 //
 //  Created by Dan Willemsen on 1/28/10.
 //  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
-#import "DrinkConnection.h"
-#import "DrinkWebSocketInterface.h"
-#import "DrinkTestInterface.h"
-#import "DrinkMachine.h"
+#import "DCConnection.h"
+#import "DCWebSocketInterface.h"
+#import "DCTestInterface.h"
+#import "DCMachine.h"
 
-@implementation DrinkConnection
+@implementation DCConnection
 
 +(BOOL)accessInstanceVariablesDirectly
 {
@@ -25,12 +25,12 @@
 		if ([[url scheme] isEqualToString:@"ws"] ||
 			[[url scheme] isEqualToString:@"wss"])
 		{
-			conn = [[DrinkWebSocketInterface alloc] initWithURL:url
+			conn = [[DCWebSocketInterface alloc] initWithURL:url
 													   delegate:self];
 		}
         else if ([[url scheme] isEqualToString:@"test"])
         {
-            conn = [[DrinkTestInterface alloc] initWithURL:url delegate:self];
+            conn = [[DCTestInterface alloc] initWithURL:url delegate:self];
         }
 		else
 		{
@@ -86,7 +86,7 @@
 
 	NSAssert(mid, @"Must have machine id");
 
-	for (DrinkMachine* m in machines)
+	for (DCMachine* m in machines)
 	{
 		if ([[m machineID] isEqualToString:mid])
 		{
@@ -98,7 +98,7 @@
 	if (!haveMachine)
 	{
 		NSIndexSet *indexes = [NSIndexSet indexSetWithIndex:[machines count]];
-		DrinkMachine *obj = [[DrinkMachine alloc] initWithServerData:machine];
+		DCMachine *obj = [[DCMachine alloc] initWithServerData:machine];
 		
 		[self willChange:NSKeyValueChangeInsertion
 		 valuesAtIndexes:indexes
@@ -113,7 +113,7 @@
 -(void)drinkServerGotCurrentUser:(NSDictionary*)user
 {
     // TODO check for already existing user
-    DrinkUser *duser = [[DrinkUser alloc] initWithServerData:user];
+    DCUser *duser = [[DCUser alloc] initWithServerData:user];
     
     [self willChangeValueForKey:@"currentUser"];
     currentUser = duser;
@@ -122,11 +122,11 @@
 
 -(void)drinkServerMachineRemoved:(NSString*)machine
 {
-	DrinkMachine *obj = nil;
+	DCMachine *obj = nil;
 	NSIndexSet *indexes;
 	NSUInteger index;
 	
-	for (DrinkMachine* m in machines)
+	for (DCMachine* m in machines)
 	{
 		if ([[m machineID] isEqualToString:machine])
 		{

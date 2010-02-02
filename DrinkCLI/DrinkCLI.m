@@ -1,18 +1,26 @@
+//
+//  DrinkCLI.m
+//  DrinkCLI
+//
+//  Created by Dan Willemsen on 1/28/10.
+//  Copyright 2010 Dan Willemsen. All rights reserved.
+//
+
 #import <Foundation/Foundation.h>
-#import <DrinkCore/DrinkConnection.h>
-#import <DrinkCore/DrinkMachine.h>
+#import <DrinkCore/DCConnection.h>
+#import <DrinkCore/DCMachine.h>
 
 @interface Watcher : NSObject
 {}
 
--(id)initWithConnection:(DrinkConnection*)conn;
+-(id)initWithConnection:(DCConnection*)conn;
 -(void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context;
 
 @end
 
 @implementation Watcher
 
--(id)initWithConnection:(DrinkConnection*)conn
+-(id)initWithConnection:(DCConnection*)conn
 {
 	if ((self = [super init]))
 	{
@@ -40,7 +48,7 @@
         if ([[change objectForKey:NSKeyValueChangeKindKey] intValue] == NSKeyValueChangeInsertion)
         {
             NSArray *machineArr = [change objectForKey:NSKeyValueChangeNewKey];
-            for(DrinkMachine *machine in machineArr)
+            for(DCMachine *machine in machineArr)
             {
                 [machine addObserver:self
                           forKeyPath:@"name"
@@ -52,7 +60,7 @@
     }
     else if ([keyPath isEqualToString:@"currentUser"])
     {
-        DrinkUser *user = [change objectForKey:NSKeyValueChangeNewKey];
+        DCUser *user = [change objectForKey:NSKeyValueChangeNewKey];
         NSLog(@"Got current user: %@", user);
     }
     else if ([keyPath isEqualToString:@"connected"])
@@ -74,7 +82,7 @@ int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
 	NSURL *url = [NSURL URLWithString:@"ws://dan@192.168.1.3:42080"];
-	DrinkConnection *conn = [[DrinkConnection alloc] initWithURL:url];
+	DCConnection *conn = [[DCConnection alloc] initWithURL:url];
 	[[Watcher alloc] initWithConnection:conn];
 	[conn connect];
 	

@@ -1,6 +1,6 @@
 //
-//  DrinkUser.h
-//  DrinkOSX
+//  DCUser.h
+//  DrinkCore
 //
 //  Created by Dan Willemsen on 1/31/10.
 //  Copyright 2010 Dan Willemsen. All rights reserved.
@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface DrinkUser : NSObject {
+@interface DCUser : NSObject {
     NSString *username;
     NSNumber *credits;
     BOOL admin;

@@ -1,17 +1,17 @@
 //
-//  DrinkTestInterface.m
-//  DrinkOSX
+//  DCTestInterface.m
+//  DrinkCore
 //
 //  Created by Dan Willemsen on 2/1/10.
-//  Copyright 2010 Apple Inc. All rights reserved.
+//  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
-#import "DrinkTestInterface.h"
+#import "DCTestInterface.h"
 
 
-@implementation DrinkTestInterface
+@implementation DCTestInterface
 
--(id)initWithURL:(NSURL *)url delegate:(DrinkConnection*)d
+-(id)initWithURL:(NSURL *)url delegate:(DCConnection*)d
 {
     if ((self = [super init]))
     {
