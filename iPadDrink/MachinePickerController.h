@@ -8,14 +8,15 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "DCConnection.h"
+#import "RowColumnView.h"
 
 @interface MachinePickerController : UIViewController {
     NSMutableArray *briefs;
     DCConnection *conn;
-    UIView *contentView;
+    RowColumnView *contentView;
 }
 
-@property (nonatomic,retain) IBOutlet UIView *contentView;
+@property (nonatomic,retain) IBOutlet RowColumnView *contentView;
 
 -(void)addMachineBrief:(NSUInteger)i;
 

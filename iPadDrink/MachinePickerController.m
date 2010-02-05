@@ -28,6 +28,7 @@
               context:nil];
     
     contentView.backgroundColor = [UIColor redColor];
+    [contentView setMode:RowColumnView_ROWS];
     
     for (i = 0; i < [[conn machines] count]; i++)
     {
@@ -38,12 +39,24 @@
 -(void)viewDidUnload
 {
     [conn removeObserver:self forKeyPath:@"machines"];
+    for (MachineBriefController *mbc in briefs)
+        [mbc release];
+    [briefs release];
+    [contentView release];
+}
+
+-(void)didAnimateFirstHalfOfRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
+    {
+        [contentView setFrame:CGRectMake(0,0,30 + 270 * ([briefs count]),700)];
+        [(UIScrollView*)[self view] setContentSize:[contentView frame].size];
+        [contentView setMode:RowColumnView_COLUMNS];
+    }
 }
 
 -(void)addMachineBrief:(NSUInteger)i
 {
-    NSUInteger a;
-    
     if (i < [briefs count])
     {
         return;
@@ -57,11 +70,9 @@
     [briefs insertObject:controller atIndex:i];
 
     [contentView addSubview:[controller view]];
-    [contentView setBounds:CGRectMake(0, 0, 768, 60 + 270 * i)];
-    for (a = 0; a <= i; a++)
-    {
-        [[[briefs objectAtIndex:a] view] setFrame:CGRectMake(30, 30 + (270 * a), 600, 240)];
-    }
+    [contentView setFrame:CGRectMake(0, 0, 768, 30 + 270 * (i + 1))];
+    [(UIScrollView*)[self view] setContentSize:[contentView frame].size];
+    [contentView setNeedsLayout];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -78,5 +89,7 @@
 {
     return YES;
 }
+
+
 
 @end

@@ -33,6 +33,7 @@
 		EADBA6FE111AB9FA00DB6429 /* MachineBriefController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA6FD111AB9FA00DB6429 /* MachineBriefController.m */; };
 		EADBA76D111BC05F00DB6429 /* MachinePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA76C111BC05F00DB6429 /* MachinePickerController.m */; };
 		EADBA76F111BC0BC00DB6429 /* MachinePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */; };
+		EAF43C5D111BFEB400A7CF2E /* RowColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,8 @@
 		EADBA76B111BC05F00DB6429 /* MachinePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachinePickerController.h; sourceTree = "<group>"; };
 		EADBA76C111BC05F00DB6429 /* MachinePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachinePickerController.m; sourceTree = "<group>"; };
 		EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MachinePicker.xib; path = iPadDrink/MachinePicker.xib; sourceTree = "<group>"; };
+		EAF43C5B111BFEB400A7CF2E /* RowColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowColumnView.h; sourceTree = "<group>"; };
+		EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowColumnView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				EADBA6FD111AB9FA00DB6429 /* MachineBriefController.m */,
 				EADBA76B111BC05F00DB6429 /* MachinePickerController.h */,
 				EADBA76C111BC05F00DB6429 /* MachinePickerController.m */,
+				EAF43C5B111BFEB400A7CF2E /* RowColumnView.h */,
+				EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */,
 			);
 			name = Classes;
 			path = iPadDrink;
@@ -287,6 +292,7 @@
 				EADBA6AD111A6E9400DB6429 /* SBJsonWriter.m in Sources */,
 				EADBA6FE111AB9FA00DB6429 /* MachineBriefController.m in Sources */,
 				EADBA76D111BC05F00DB6429 /* MachinePickerController.m in Sources */,
+				EAF43C5D111BFEB400A7CF2E /* RowColumnView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
