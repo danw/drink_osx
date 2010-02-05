@@ -7,7 +7,7 @@
 //
 
 #import "DCMachine.h"
-
+#import "DCMutableMachine.h"
 
 @implementation DCMachine
 
@@ -42,32 +42,88 @@
 
 -(void)updateWithServerData:(NSDictionary*)data
 {
-	[self setValue:[data objectForKey:@"admin_only"] forKey:@"adminOnly"];
-	[self setValue:[data objectForKey:@"allow_connect"] forKey:@"allowConnect"];
-	[self setValue:[data objectForKey:@"available_sensor"] forKey:@"availableSensor"];
-	[self setMachineIP:[data objectForKey:@"machine_ip"]];
-	[self setName:[data objectForKey:@"name"]];
-	[self setPassword:[data objectForKey:@"password"]];
-	[self setPublicIP:[data objectForKey:@"public_ip"]];
-	[self setTemperature:[data objectForKey:@"temperature"]];
+   	BOOL newConnected = [[data objectForKey:@"connected"] boolValue];
+    BOOL newAdminOnly = [[data objectForKey:@"admin_only"] boolValue];
+    BOOL newAllowConnect = [[data objectForKey:@"allow_connect"] boolValue];
+    BOOL newAvailableSensor = [[data objectForKey:@"available_sensor"] boolValue];
+    NSString *newMachineIP = [data objectForKey:@"machine_ip"];
+    NSString *newName = [data objectForKey:@"name"];
+    NSString *newPassword = [data objectForKey:@"password"];
+    NSString *newPublicIP = [data objectForKey:@"public_ip"];
+    NSNumber *newTemperature = [data objectForKey:@"temperature"];
 	
-	BOOL newConnected = [[data objectForKey:@"connected"] boolValue];
 	if (connected != newConnected)
 	{
 		[self willChangeValueForKey:@"connected"];
 		connected = newConnected;
 		[self didChangeValueForKey:@"connected"];
 	}
-}
-
--(void)setNilValueForKey:(NSString *)key
-{
-	// TODO: do the right thing here, for admin/non-admin and server/user update cases
+    
+    if (adminOnly != newAdminOnly)
+    {
+        [self willChangeValueForKey:@"adminKey"];
+        adminOnly = newAdminOnly;
+        [self didChangeValueForKey:@"adminKey"];
+    }
+    
+    if (allowConnect != newAllowConnect)
+    {
+        [self willChangeValueForKey:@"allowConnect"];
+        allowConnect = newAllowConnect;
+        [self didChangeValueForKey:@"allowConnect"];
+    }
+    
+    if (availableSensor != newAvailableSensor)
+    {
+        [self willChangeValueForKey:@"availableSensor"];
+        availableSensor = newAvailableSensor;
+        [self didChangeValueForKey:@"availableSensor"];
+    }
+    
+    if (machineIP == nil || ![newMachineIP isEqualToString:machineIP])
+    {
+        [self willChangeValueForKey:@"machineIP"];
+        machineIP = [newMachineIP copy];
+        [self didChangeValueForKey:@"machineIP"];
+    }
+    
+    if (name == nil || ![newName isEqualToString:name])
+    {
+        [self willChangeValueForKey:@"name"];
+        name = [newName copy];
+        [self didChangeValueForKey:@"name"];
+    }
+    
+    if (password == nil || ![newPassword isEqualToString:password])
+    {
+        [self willChangeValueForKey:@"password"];
+        password = [newPassword copy];
+        [self didChangeValueForKey:@"password"];
+    }
+    
+    if (publicIP == nil || ![newPublicIP isEqualToString:publicIP])
+    {
+        [self willChangeValueForKey:@"publicIP"];
+        publicIP = [newPublicIP copy];
+        [self didChangeValueForKey:@"publicIP"];
+    }
+    
+    if (temperature == nil || ![newTemperature isEqualToNumber:temperature])
+    {
+        [self willChangeValueForKey:@"temperature"];
+        temperature = [newTemperature copy];
+        [self didChangeValueForKey:@"temperature"];
+    }
 }
 
 -(NSString*)description
 {
     return [NSString stringWithFormat:@"<DCMachine \"%@\" (%@)>", name, machineID];
+}
+
+-(DCMutableMachine*)mutableCopy
+{
+    return [[DCMutableMachine alloc] initWithMachine:self];
 }
 
 @end

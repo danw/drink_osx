@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class DCMutableMachine;
 
 @interface DCMachine : NSObject {
 	NSString *machineID;
@@ -23,17 +24,19 @@
 }
 
 @property (readonly) NSString *machineID;
-@property (readwrite) BOOL adminOnly;
-@property (readwrite) BOOL allowConnect;
-@property (readwrite) BOOL availableSensor;
+@property (readonly) BOOL adminOnly;
+@property (readonly) BOOL allowConnect;
+@property (readonly) BOOL availableSensor;
 @property (readonly) BOOL connected;
-@property (readwrite, retain) NSString *machineIP;
-@property (readwrite, retain) NSString *name;
-@property (readwrite, retain) NSString *password;
-@property (readwrite, retain) NSString *publicIP;
-@property (readwrite, retain) NSNumber *temperature;
+@property (readonly) NSString *machineIP;
+@property (readonly) NSString *name;
+@property (readonly) NSString *password;
+@property (readonly) NSString *publicIP;
+@property (readonly) NSNumber *temperature;
 
 -(id)initWithServerData:(NSDictionary*)data;
 -(void)updateWithServerData:(NSDictionary*)data;
+
+-(DCMutableMachine*)mutableCopy;
 
 @end

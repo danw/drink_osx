@@ -26,6 +26,10 @@
 		EA57A416111528E80080D0C1 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57A409111528E80080D0C1 /* SBJsonWriter.m */; };
 		EA59D0961117EE24009E604A /* DCTestInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59D0941117EE24009E604A /* DCTestInterface.h */; };
 		EA59D0971117EE24009E604A /* DCTestInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = EA59D0951117EE24009E604A /* DCTestInterface.m */; };
+		EA59D14F11180B52009E604A /* DCMutableMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59D14D11180B52009E604A /* DCMutableMachine.h */; };
+		EA59D15011180B52009E604A /* DCMutableMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = EA59D14E11180B52009E604A /* DCMutableMachine.m */; };
+		EA59D18D1118E4CD009E604A /* DCMutableUser.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59D18B1118E4CD009E604A /* DCMutableUser.h */; };
+		EA59D18E1118E4CD009E604A /* DCMutableUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA59D18C1118E4CD009E604A /* DCMutableUser.m */; };
 		EA715854111683E000959463 /* DCUser.h in Headers */ = {isa = PBXBuildFile; fileRef = EA715852111683E000959463 /* DCUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA715855111683E000959463 /* DCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA715853111683E000959463 /* DCUser.m */; };
 		EA7158DA1116965C00959463 /* DrinkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* DrinkCore.framework */; };
@@ -88,6 +92,10 @@
 		EA57A409111528E80080D0C1 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		EA59D0941117EE24009E604A /* DCTestInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTestInterface.h; sourceTree = "<group>"; };
 		EA59D0951117EE24009E604A /* DCTestInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTestInterface.m; sourceTree = "<group>"; };
+		EA59D14D11180B52009E604A /* DCMutableMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMutableMachine.h; sourceTree = "<group>"; };
+		EA59D14E11180B52009E604A /* DCMutableMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMutableMachine.m; sourceTree = "<group>"; };
+		EA59D18B1118E4CD009E604A /* DCMutableUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMutableUser.h; sourceTree = "<group>"; };
+		EA59D18C1118E4CD009E604A /* DCMutableUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMutableUser.m; sourceTree = "<group>"; };
 		EA715852111683E000959463 /* DCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUser.h; sourceTree = "<group>"; };
 		EA715853111683E000959463 /* DCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUser.m; sourceTree = "<group>"; };
 		EA7158CF1116963800959463 /* Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drink.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +287,10 @@
 				EA715853111683E000959463 /* DCUser.m */,
 				EA59D0941117EE24009E604A /* DCTestInterface.h */,
 				EA59D0951117EE24009E604A /* DCTestInterface.m */,
+				EA59D14D11180B52009E604A /* DCMutableMachine.h */,
+				EA59D14E11180B52009E604A /* DCMutableMachine.m */,
+				EA59D18B1118E4CD009E604A /* DCMutableUser.h */,
+				EA59D18C1118E4CD009E604A /* DCMutableUser.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -304,6 +316,8 @@
 				EA57A415111528E80080D0C1 /* SBJsonWriter.h in Headers */,
 				EA715854111683E000959463 /* DCUser.h in Headers */,
 				EA59D0961117EE24009E604A /* DCTestInterface.h in Headers */,
+				EA59D14F11180B52009E604A /* DCMutableMachine.h in Headers */,
+				EA59D18D1118E4CD009E604A /* DCMutableUser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +435,8 @@
 				EA57A416111528E80080D0C1 /* SBJsonWriter.m in Sources */,
 				EA715855111683E000959463 /* DCUser.m in Sources */,
 				EA59D0971117EE24009E604A /* DCTestInterface.m in Sources */,
+				EA59D15011180B52009E604A /* DCMutableMachine.m in Sources */,
+				EA59D18E1118E4CD009E604A /* DCMutableUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

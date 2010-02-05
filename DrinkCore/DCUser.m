@@ -7,7 +7,7 @@
 //
 
 #import "DCUser.h"
-
+#import "DCMutableUser.h"
 
 @implementation DCUser
 
@@ -40,6 +40,11 @@
             username, 
             admin ? @"(admin)" : @"", 
             credits];
+}
+
+-(DCMutableUser*)mutableCopy
+{
+    return [[DCMutableUser alloc] initWithUser:self];
 }
 
 @end

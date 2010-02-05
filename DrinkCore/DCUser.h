@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class DCMutableUser;
 
 @interface DCUser : NSObject {
     NSString *username;
@@ -23,5 +24,7 @@
 
 -(id)initWithServerData:(NSDictionary*)data;
 -(void)updateWithServerData:(NSDictionary*)data;
+
+-(DCMutableUser*)mutableCopy;
 
 @end
