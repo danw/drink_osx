@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* iPadDrinkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iPadDrinkAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		EADBA69F111A6E9400DB6429 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA680111A6E9400DB6429 /* AsyncSocket.m */; };
+		EADBA6A0111A6E9400DB6429 /* DCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA682111A6E9400DB6429 /* DCConnection.m */; };
+		EADBA6A1111A6E9400DB6429 /* DCConnectionInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA684111A6E9400DB6429 /* DCConnectionInterface.m */; };
+		EADBA6A2111A6E9400DB6429 /* DCMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA686111A6E9400DB6429 /* DCMachine.m */; };
+		EADBA6A3111A6E9400DB6429 /* DCMutableMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA688111A6E9400DB6429 /* DCMutableMachine.m */; };
+		EADBA6A4111A6E9400DB6429 /* DCMutableUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA68A111A6E9400DB6429 /* DCMutableUser.m */; };
+		EADBA6A5111A6E9400DB6429 /* DCTestInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA68C111A6E9400DB6429 /* DCTestInterface.m */; };
+		EADBA6A6111A6E9400DB6429 /* DCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA68E111A6E9400DB6429 /* DCUser.m */; };
+		EADBA6A7111A6E9400DB6429 /* DCWebSocketInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA690111A6E9400DB6429 /* DCWebSocketInterface.m */; };
+		EADBA6A8111A6E9400DB6429 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA694111A6E9400DB6429 /* NSObject+SBJSON.m */; };
+		EADBA6A9111A6E9400DB6429 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA696111A6E9400DB6429 /* NSString+SBJSON.m */; };
+		EADBA6AA111A6E9400DB6429 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA698111A6E9400DB6429 /* SBJSON.m */; };
+		EADBA6AB111A6E9400DB6429 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA69A111A6E9400DB6429 /* SBJsonBase.m */; };
+		EADBA6AC111A6E9400DB6429 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA69C111A6E9400DB6429 /* SBJsonParser.m */; };
+		EADBA6AD111A6E9400DB6429 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA69E111A6E9400DB6429 /* SBJsonWriter.m */; };
+		EADBA6C2111A72A700DB6429 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADBA6C1111A72A700DB6429 /* CFNetwork.framework */; };
+		EADBA6FA111AB86D00DB6429 /* MachineBrief.xib in Resources */ = {isa = PBXBuildFile; fileRef = EADBA6F9111AB86D00DB6429 /* MachineBrief.xib */; };
+		EADBA6FE111AB9FA00DB6429 /* MachineBriefController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA6FD111AB9FA00DB6429 /* MachineBriefController.m */; };
+		EADBA76D111BC05F00DB6429 /* MachinePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA76C111BC05F00DB6429 /* MachinePickerController.m */; };
+		EADBA76F111BC0BC00DB6429 /* MachinePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iPadDrinkAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadDrinkAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iPadDrinkAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadDrinkAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iPadDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPadDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = iPadDrink/MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iPadDrink/main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iPadDrink_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadDrink_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iPadDrink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPadDrink-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		EADBA67F111A6E9400DB6429 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		EADBA680111A6E9400DB6429 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		EADBA681111A6E9400DB6429 /* DCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCConnection.h; sourceTree = "<group>"; };
+		EADBA682111A6E9400DB6429 /* DCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCConnection.m; sourceTree = "<group>"; };
+		EADBA683111A6E9400DB6429 /* DCConnectionInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCConnectionInterface.h; sourceTree = "<group>"; };
+		EADBA684111A6E9400DB6429 /* DCConnectionInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCConnectionInterface.m; sourceTree = "<group>"; };
+		EADBA685111A6E9400DB6429 /* DCMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMachine.h; sourceTree = "<group>"; };
+		EADBA686111A6E9400DB6429 /* DCMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMachine.m; sourceTree = "<group>"; };
+		EADBA687111A6E9400DB6429 /* DCMutableMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMutableMachine.h; sourceTree = "<group>"; };
+		EADBA688111A6E9400DB6429 /* DCMutableMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMutableMachine.m; sourceTree = "<group>"; };
+		EADBA689111A6E9400DB6429 /* DCMutableUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMutableUser.h; sourceTree = "<group>"; };
+		EADBA68A111A6E9400DB6429 /* DCMutableUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMutableUser.m; sourceTree = "<group>"; };
+		EADBA68B111A6E9400DB6429 /* DCTestInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTestInterface.h; sourceTree = "<group>"; };
+		EADBA68C111A6E9400DB6429 /* DCTestInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTestInterface.m; sourceTree = "<group>"; };
+		EADBA68D111A6E9400DB6429 /* DCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUser.h; sourceTree = "<group>"; };
+		EADBA68E111A6E9400DB6429 /* DCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUser.m; sourceTree = "<group>"; };
+		EADBA68F111A6E9400DB6429 /* DCWebSocketInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCWebSocketInterface.h; sourceTree = "<group>"; };
+		EADBA690111A6E9400DB6429 /* DCWebSocketInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCWebSocketInterface.m; sourceTree = "<group>"; };
+		EADBA692111A6E9400DB6429 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		EADBA693111A6E9400DB6429 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		EADBA694111A6E9400DB6429 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		EADBA695111A6E9400DB6429 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		EADBA696111A6E9400DB6429 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		EADBA697111A6E9400DB6429 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		EADBA698111A6E9400DB6429 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		EADBA699111A6E9400DB6429 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		EADBA69A111A6E9400DB6429 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		EADBA69B111A6E9400DB6429 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		EADBA69C111A6E9400DB6429 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		EADBA69D111A6E9400DB6429 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		EADBA69E111A6E9400DB6429 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		EADBA6C1111A72A700DB6429 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EADBA6F9111AB86D00DB6429 /* MachineBrief.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MachineBrief.xib; path = iPadDrink/MachineBrief.xib; sourceTree = "<group>"; };
+		EADBA6FC111AB9FA00DB6429 /* MachineBriefController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachineBriefController.h; sourceTree = "<group>"; };
+		EADBA6FD111AB9FA00DB6429 /* MachineBriefController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachineBriefController.m; sourceTree = "<group>"; };
+		EADBA76B111BC05F00DB6429 /* MachinePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachinePickerController.h; sourceTree = "<group>"; };
+		EADBA76C111BC05F00DB6429 /* MachinePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachinePickerController.m; sourceTree = "<group>"; };
+		EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MachinePicker.xib; path = iPadDrink/MachinePicker.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				EADBA6C2111A72A700DB6429 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* iPadDrinkAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iPadDrinkAppDelegate.m */,
+				EADBA6FC111AB9FA00DB6429 /* MachineBriefController.h */,
+				EADBA6FD111AB9FA00DB6429 /* MachineBriefController.m */,
+				EADBA76B111BC05F00DB6429 /* MachinePickerController.h */,
+				EADBA76C111BC05F00DB6429 /* MachinePickerController.m */,
+			);
+			name = Classes;
+			path = iPadDrink;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iPadDrink.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				EADBA67E111A6E6500DB6429 /* DrinkCore */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources-iPad */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iPadDrink_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* iPadDrink-Info.plist */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				EADBA6F9111AB86D00DB6429 /* MachineBrief.xib */,
+				EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */,
+			);
+			name = "Resources-iPad";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				EADBA6C1111A72A700DB6429 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EADBA67E111A6E6500DB6429 /* DrinkCore */ = {
+			isa = PBXGroup;
+			children = (
+				EADBA67F111A6E9400DB6429 /* AsyncSocket.h */,
+				EADBA680111A6E9400DB6429 /* AsyncSocket.m */,
+				EADBA681111A6E9400DB6429 /* DCConnection.h */,
+				EADBA682111A6E9400DB6429 /* DCConnection.m */,
+				EADBA683111A6E9400DB6429 /* DCConnectionInterface.h */,
+				EADBA684111A6E9400DB6429 /* DCConnectionInterface.m */,
+				EADBA685111A6E9400DB6429 /* DCMachine.h */,
+				EADBA686111A6E9400DB6429 /* DCMachine.m */,
+				EADBA687111A6E9400DB6429 /* DCMutableMachine.h */,
+				EADBA688111A6E9400DB6429 /* DCMutableMachine.m */,
+				EADBA689111A6E9400DB6429 /* DCMutableUser.h */,
+				EADBA68A111A6E9400DB6429 /* DCMutableUser.m */,
+				EADBA68B111A6E9400DB6429 /* DCTestInterface.h */,
+				EADBA68C111A6E9400DB6429 /* DCTestInterface.m */,
+				EADBA68D111A6E9400DB6429 /* DCUser.h */,
+				EADBA68E111A6E9400DB6429 /* DCUser.m */,
+				EADBA68F111A6E9400DB6429 /* DCWebSocketInterface.h */,
+				EADBA690111A6E9400DB6429 /* DCWebSocketInterface.m */,
+				EADBA691111A6E9400DB6429 /* JSON */,
+			);
+			path = DrinkCore;
+			sourceTree = "<group>";
+		};
+		EADBA691111A6E9400DB6429 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				EADBA692111A6E9400DB6429 /* JSON.h */,
+				EADBA693111A6E9400DB6429 /* NSObject+SBJSON.h */,
+				EADBA694111A6E9400DB6429 /* NSObject+SBJSON.m */,
+				EADBA695111A6E9400DB6429 /* NSString+SBJSON.h */,
+				EADBA696111A6E9400DB6429 /* NSString+SBJSON.m */,
+				EADBA697111A6E9400DB6429 /* SBJSON.h */,
+				EADBA698111A6E9400DB6429 /* SBJSON.m */,
+				EADBA699111A6E9400DB6429 /* SBJsonBase.h */,
+				EADBA69A111A6E9400DB6429 /* SBJsonBase.m */,
+				EADBA69B111A6E9400DB6429 /* SBJsonParser.h */,
+				EADBA69C111A6E9400DB6429 /* SBJsonParser.m */,
+				EADBA69D111A6E9400DB6429 /* SBJsonWriter.h */,
+				EADBA69E111A6E9400DB6429 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iPadDrink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPadDrink" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPadDrink;
+			productName = iPadDrink;
+			productReference = 1D6058910D05DD3D006BFB54 /* iPadDrink.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPadDrink" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iPadDrink */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				EADBA6FA111AB86D00DB6429 /* MachineBrief.xib in Resources */,
+				EADBA76F111BC0BC00DB6429 /* MachinePicker.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* iPadDrinkAppDelegate.m in Sources */,
+				EADBA69F111A6E9400DB6429 /* AsyncSocket.m in Sources */,
+				EADBA6A0111A6E9400DB6429 /* DCConnection.m in Sources */,
+				EADBA6A1111A6E9400DB6429 /* DCConnectionInterface.m in Sources */,
+				EADBA6A2111A6E9400DB6429 /* DCMachine.m in Sources */,
+				EADBA6A3111A6E9400DB6429 /* DCMutableMachine.m in Sources */,
+				EADBA6A4111A6E9400DB6429 /* DCMutableUser.m in Sources */,
+				EADBA6A5111A6E9400DB6429 /* DCTestInterface.m in Sources */,
+				EADBA6A6111A6E9400DB6429 /* DCUser.m in Sources */,
+				EADBA6A7111A6E9400DB6429 /* DCWebSocketInterface.m in Sources */,
+				EADBA6A8111A6E9400DB6429 /* NSObject+SBJSON.m in Sources */,
+				EADBA6A9111A6E9400DB6429 /* NSString+SBJSON.m in Sources */,
+				EADBA6AA111A6E9400DB6429 /* SBJSON.m in Sources */,
+				EADBA6AB111A6E9400DB6429 /* SBJsonBase.m in Sources */,
+				EADBA6AC111A6E9400DB6429 /* SBJsonParser.m in Sources */,
+				EADBA6AD111A6E9400DB6429 /* SBJsonWriter.m in Sources */,
+				EADBA6FE111AB9FA00DB6429 /* MachineBriefController.m in Sources */,
+				EADBA76D111BC05F00DB6429 /* MachinePickerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPadDrink_Prefix.pch;
+				INFOPLIST_FILE = "iPadDrink-Info.plist";
+				PRODUCT_NAME = iPadDrink;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPadDrink_Prefix.pch;
+				INFOPLIST_FILE = "iPadDrink-Info.plist";
+				PRODUCT_NAME = iPadDrink;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPadDrink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPadDrink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -6,7 +6,7 @@
 //  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 #import "DCUser.h"
 
 @interface DCMutableUser : DCUser {
