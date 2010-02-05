@@ -11,11 +11,14 @@
 
 @implementation DCConnectionInterface
 
--(id)initWithURL:(NSURL*)url
+-(id)initWithURL:(NSURL*)url delegate:(id <DCConnectionInterfaceDelegate>)d
 {
-	[self doesNotRecognizeSelector:_cmd];
-	[self release];
-	return nil;
+	if ((self = [super init]))
+    {
+        delegate = d;
+    }
+    
+	return self;
 }
 
 -(void)connect

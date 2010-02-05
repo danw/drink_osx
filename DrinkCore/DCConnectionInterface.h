@@ -8,11 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DCConnectionInterface : NSObject {
+@protocol DCConnectionInterfaceDelegate
 
+-(void)drinkServerDidConnect;
+-(void)drinkServerDidDisconnect;
+-(void)drinkServerGotMachine:(NSDictionary*)machine;
+-(void)drinkServerMachineRemoved:(NSString*)machine;
+-(void)drinkServerGotCurrentUser:(NSDictionary*)user;
+
+@end
+
+@interface DCConnectionInterface : NSObject {
+    id <DCConnectionInterfaceDelegate> delegate;
 }
 
--(id)initWithURL:(NSURL*)url;
+-(id)initWithURL:(NSURL*)url delegate:(id <DCConnectionInterfaceDelegate>)d;
 -(void)connect;
 -(void)close;
 

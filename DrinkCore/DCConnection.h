@@ -10,7 +10,7 @@
 #import "DCConnectionInterface.h"
 #import "DCUser.h"
 
-@interface DCConnection : NSObject {
+@interface DCConnection : NSObject < DCConnectionInterfaceDelegate > {
 	DCConnectionInterface *conn;
 	BOOL connected;
 
@@ -26,15 +26,5 @@
 
 -(void)connect;
 -(void)close;
-
-@end
-
-@interface DCConnection (DrinkConnectionInterfaceDelegate)
-
--(void)drinkServerDidConnect;
--(void)drinkServerDidDisconnect;
--(void)drinkServerGotMachine:(NSDictionary*)machine;
--(void)drinkServerMachineRemoved:(NSString*)machine;
--(void)drinkServerGotCurrentUser:(NSDictionary*)user;
 
 @end

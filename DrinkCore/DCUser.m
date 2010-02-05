@@ -44,7 +44,7 @@
 
 -(DCMutableUser*)mutableCopy
 {
-    return [[DCMutableUser alloc] initWithUser:self];
+    return [[DCMutableUser alloc] initWithUserName:self];
 }
 
 @end

@@ -10,10 +10,7 @@
 #import "DCConnection.h"
 
 @interface DCTestInterface : DCConnectionInterface {
-    DCConnection *delegate;
 }
-
--(id)initWithURL:(NSURL *)url delegate:(DCConnection*)delegate;
 
 -(void)connect;
 -(void)close;

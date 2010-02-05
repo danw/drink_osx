@@ -11,16 +11,6 @@
 
 @implementation DCTestInterface
 
--(id)initWithURL:(NSURL *)url delegate:(DCConnection*)d
-{
-    if ((self = [super init]))
-    {
-        delegate = d;
-    }
-    
-    return self;
-}
-
 -(void)connect
 {
     NSDictionary *user = [NSDictionary dictionaryWithObjectsAndKeys:

@@ -21,13 +21,12 @@
 
 #pragma mark Public Functions
 
--(id)initWithURL:(NSURL*)host delegate:(DCConnection*)d
+-(id)initWithURL:(NSURL*)host delegate:(id <DCConnectionInterfaceDelegate>)d
 {
-	if (self = [super init])
+	if (self = [super initWithURL:host delegate:d])
 	{
 		url = host;
 		[url retain];
-		delegate = d;
 		sock = [[AsyncSocket alloc] initWithDelegate:self];
 	}
 	return self;

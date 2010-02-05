@@ -14,7 +14,7 @@
     DCUser *serverUser;
 }
 
--(id)initWithUser:(DCUser*)user;
+-(id)initWithUserName:(DCUser*)user;
 
 @property (readonly) DCUser *originalUser;
 @property (readonly) DCUser *serverUser;

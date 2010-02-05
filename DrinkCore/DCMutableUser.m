@@ -16,7 +16,7 @@
 	return NO;
 }
 
--(id)initWithUser:(DCUser*)user
+-(id)initWithUserName:(DCUser*)user
 {
     if ((self = [super init]))
     {

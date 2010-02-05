@@ -13,14 +13,12 @@
 
 @interface DCWebSocketInterface : DCConnectionInterface {
 	NSURL *url;
-	DCConnection *delegate;
-
+    
 	AsyncSocket *sock;
 	
 	NSData *websocket_terminator;
 }
 
--(id)initWithURL:(NSURL*)url delegate:(DCConnection*)d;
 -(void)connect;
 -(void)close;
 
