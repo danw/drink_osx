@@ -26,12 +26,12 @@
            forKeyPath:@"machines"
               options:NSKeyValueObservingOptionNew
               context:nil];
-//    
-//    if (UIInterfaceOrientationIsPortrait([self interfaceOrientation]))
-//        [contentView setMode:RowColumnView_ROWS];
-//    else
-//        [contentView setMode:RowColumnView_COLUMNS];
-//    
+    
+    if (UIInterfaceOrientationIsPortrait([self interfaceOrientation]))
+        [contentView setMode:RowColumnView_ROWS];
+    else
+        [contentView setMode:RowColumnView_COLUMNS];
+    
     for (i = 0; i < [[conn machines] count]; i++)
     {
         [self addMachineBrief:i];
@@ -47,9 +47,9 @@
     [contentView release];
 }
 
--(void)didAnimateFirstHalfOfRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
-    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
+    if (UIInterfaceOrientationIsLandscape([self interfaceOrientation]))
     {
         [contentView setMode:RowColumnView_COLUMNS];
     }
@@ -57,8 +57,9 @@
     {
         [contentView setMode:RowColumnView_ROWS];
     }
-
-    [(UIScrollView*)[self view] setContentSize:[contentView frame].size];
+    [contentView setNeedsLayout];
+    
+    [(UIScrollView*)[self view] setContentSize:[contentView frame].size];    
 }
 
 -(void)addMachineBrief:(NSUInteger)i
