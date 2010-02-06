@@ -15,10 +15,8 @@
 @synthesize window, navControl;
 @synthesize conn;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	
-    // Override point for customization after application launch
-	
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{	
     NSURL *url = [NSURL URLWithString:@"test://dan@192.168.1.3:42080"];
     conn = [[DCConnection alloc] initWithURL:url];
     
@@ -26,8 +24,6 @@
            forKeyPath:@"currentUser"
               options:0
               context:nil];
-    
-    [navControl setTitle:@"Disconnected"];
     
     [conn connect];
     
@@ -39,9 +35,16 @@
 
 -(void)updateTitle:(UIViewController*)vc
 {
-    NSString *newTitle = [NSString stringWithFormat:@"User: %@ Credits: %@", [[conn currentUser] username], [[conn currentUser] credits]];
-    [[navControl visibleViewController] setTitle:newTitle];
-    [newTitle release];
+    if (conn.connected)
+    {
+        NSString *newTitle = [NSString stringWithFormat:@"User: %@ Credits: %@", [[conn currentUser] username], [[conn currentUser] credits]];
+        [[navControl visibleViewController] setTitle:newTitle];
+    }
+    else
+    {
+        [[navControl visibleViewController] setTitle:@"Disconnected"];
+    }
+
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

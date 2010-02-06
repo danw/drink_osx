@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#define RowColumnView_ROWS 1
-#define RowColumnView_COLUMNS 2
+#define RowColumnView_ROWS 0
+#define RowColumnView_COLUMNS 1
 
 @interface RowColumnView : UIView {
     NSUInteger mode;
+    NSUInteger length;
 }
 
 -(void)setMode:(NSUInteger)m;

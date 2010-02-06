@@ -6,6 +6,7 @@
 //
 
 #import "MachineBriefController.h"
+#import "DWImageCache.h"
 
 @implementation MachineBriefController
 
@@ -31,6 +32,9 @@
                  options:NSKeyValueObservingOptionNew
                  context:nil];
     [nameLabel setText:[machine name]];
+
+    [DWImageCache cacheImageFromURL:[NSURL URLWithString:@"http://www.csh.rit.edu/~dan/drink_machine.jpg"]
+                                                 forView:imageView];
 }
 
 -(void)viewDidUnload

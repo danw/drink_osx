@@ -34,6 +34,7 @@
 		EADBA76D111BC05F00DB6429 /* MachinePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA76C111BC05F00DB6429 /* MachinePickerController.m */; };
 		EADBA76F111BC0BC00DB6429 /* MachinePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */; };
 		EAF43C5D111BFEB400A7CF2E /* RowColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */; };
+		EAF43D5D111D101900A7CF2E /* DWImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF43D5C111D101900A7CF2E /* DWImageCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MachinePicker.xib; path = iPadDrink/MachinePicker.xib; sourceTree = "<group>"; };
 		EAF43C5B111BFEB400A7CF2E /* RowColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowColumnView.h; sourceTree = "<group>"; };
 		EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowColumnView.m; sourceTree = "<group>"; };
+		EAF43D5B111D101900A7CF2E /* DWImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWImageCache.h; sourceTree = "<group>"; };
+		EAF43D5C111D101900A7CF2E /* DWImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWImageCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				EADBA76C111BC05F00DB6429 /* MachinePickerController.m */,
 				EAF43C5B111BFEB400A7CF2E /* RowColumnView.h */,
 				EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */,
+				EAF43D5B111D101900A7CF2E /* DWImageCache.h */,
+				EAF43D5C111D101900A7CF2E /* DWImageCache.m */,
 			);
 			name = Classes;
 			path = iPadDrink;
@@ -293,6 +298,7 @@
 				EADBA6FE111AB9FA00DB6429 /* MachineBriefController.m in Sources */,
 				EADBA76D111BC05F00DB6429 /* MachinePickerController.m in Sources */,
 				EAF43C5D111BFEB400A7CF2E /* RowColumnView.m in Sources */,
+				EAF43D5D111D101900A7CF2E /* DWImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

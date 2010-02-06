@@ -8,32 +8,38 @@
 
 #import "RowColumnView.h"
 
+#define PADDING 30
+#define ITEMLENGTH 240
 
 @implementation RowColumnView
 
+-(void)awakeFromNib
+{
+    mode = RowColumnView_ROWS;
+    length = PADDING;
+}
 
-- (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        // Initialization code
-    }
-    return self;
+- (void)didAddSubview:(UIView *)view
+{
+    length += PADDING + ITEMLENGTH;
+    NSLog(@"didAddSubview: %u", length);
+    
+    [self setMode:mode];
 }
 
 - (void)layoutSubviews {
     NSUInteger i;
     CGRect f;
     CGRect b = self.bounds;
-    NSUInteger horizontalPadding = 30;
-    NSUInteger verticalPadding = 30;
     
     if (mode == RowColumnView_ROWS)
     {
         for (i = 0; i < [[self subviews] count]; i++)
         {
-            f = CGRectMake(horizontalPadding,
-                           verticalPadding + ((verticalPadding + 240)*i),
-                           CGRectGetWidth(b) - 2*horizontalPadding,
-                           240);
+            f = CGRectMake(PADDING,
+                           PADDING + (PADDING + ITEMLENGTH) * i,
+                           CGRectGetWidth(b) - 2 * PADDING,
+                           ITEMLENGTH);
             [[[self subviews] objectAtIndex:i] setFrame:f];
         }
     }
@@ -41,10 +47,10 @@
     {
         for (i = 0; i < [[self subviews] count]; i++)
         {
-            f = CGRectMake(horizontalPadding + ((horizontalPadding + 240) * i), 
-                           verticalPadding, 
-                           240, 
-                           CGRectGetHeight(b) - verticalPadding*2);
+            f = CGRectMake(PADDING + (PADDING + ITEMLENGTH) * i,
+                           PADDING, 
+                           ITEMLENGTH, 
+                           CGRectGetHeight(b) - PADDING * 2);
             [[[self subviews] objectAtIndex:i] setFrame:f];
         }
     }
@@ -52,14 +58,21 @@
     {
         NSLog(@"Unknown mode for RowColumnView");
     }
-
-
 }
 
 -(void)setMode:(NSUInteger)m
 {
+    CGRect parentBounds = [[self superview] bounds];
     mode = m;
-    [self setNeedsLayout];
+    
+    if (mode == RowColumnView_ROWS)
+    {
+        [self setFrame:CGRectMake(0, 0, CGRectGetWidth(parentBounds), length)];
+    }
+    else if (mode == RowColumnView_COLUMNS)
+    {
+        [self setFrame:CGRectMake(0, 0, length, CGRectGetHeight(parentBounds))];
+    }
 }
 
 /*
