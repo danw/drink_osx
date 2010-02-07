@@ -14,6 +14,10 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		EA45AD11111D49D5001AA8CC /* MachineBriefView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA45AD10111D49D5001AA8CC /* MachineBriefView.m */; };
+		EA45AD2A111D6963001AA8CC /* MachineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA45AD28111D6963001AA8CC /* MachineDetailViewController.m */; };
+		EA45AD2B111D6963001AA8CC /* MachineDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA45AD29111D6963001AA8CC /* MachineDetail.xib */; };
+		EA45AD7F111E6F20001AA8CC /* MachineEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA45AD7D111E6F20001AA8CC /* MachineEditViewController.m */; };
+		EA45AD80111E6F20001AA8CC /* MachineEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA45AD7E111E6F20001AA8CC /* MachineEdit.xib */; };
 		EADBA69F111A6E9400DB6429 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA680111A6E9400DB6429 /* AsyncSocket.m */; };
 		EADBA6A0111A6E9400DB6429 /* DCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA682111A6E9400DB6429 /* DCConnection.m */; };
 		EADBA6A1111A6E9400DB6429 /* DCConnectionInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA684111A6E9400DB6429 /* DCConnectionInterface.m */; };
@@ -35,7 +39,7 @@
 		EADBA76D111BC05F00DB6429 /* MachinePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADBA76C111BC05F00DB6429 /* MachinePickerController.m */; };
 		EADBA76F111BC0BC00DB6429 /* MachinePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */; };
 		EAF43C5D111BFEB400A7CF2E /* RowColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */; };
-		EAF43D5D111D101900A7CF2E /* DWImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF43D5C111D101900A7CF2E /* DWImageCache.m */; };
+		EAF43D5D111D101900A7CF2E /* DWCachedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF43D5C111D101900A7CF2E /* DWCachedImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,12 @@
 		8D1107310486CEB800E47090 /* iPadDrink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPadDrink-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		EA45AD0F111D49D5001AA8CC /* MachineBriefView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachineBriefView.h; sourceTree = "<group>"; };
 		EA45AD10111D49D5001AA8CC /* MachineBriefView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachineBriefView.m; sourceTree = "<group>"; };
+		EA45AD27111D6963001AA8CC /* MachineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachineDetailViewController.h; sourceTree = "<group>"; };
+		EA45AD28111D6963001AA8CC /* MachineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachineDetailViewController.m; sourceTree = "<group>"; };
+		EA45AD29111D6963001AA8CC /* MachineDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MachineDetail.xib; path = iPadDrink/MachineDetail.xib; sourceTree = "<group>"; };
+		EA45AD7C111E6F20001AA8CC /* MachineEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachineEditViewController.h; sourceTree = "<group>"; };
+		EA45AD7D111E6F20001AA8CC /* MachineEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachineEditViewController.m; sourceTree = "<group>"; };
+		EA45AD7E111E6F20001AA8CC /* MachineEdit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MachineEdit.xib; path = iPadDrink/MachineEdit.xib; sourceTree = "<group>"; };
 		EADBA67F111A6E9400DB6429 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
 		EADBA680111A6E9400DB6429 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		EADBA681111A6E9400DB6429 /* DCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCConnection.h; sourceTree = "<group>"; };
@@ -91,8 +101,8 @@
 		EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MachinePicker.xib; path = iPadDrink/MachinePicker.xib; sourceTree = "<group>"; };
 		EAF43C5B111BFEB400A7CF2E /* RowColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowColumnView.h; sourceTree = "<group>"; };
 		EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowColumnView.m; sourceTree = "<group>"; };
-		EAF43D5B111D101900A7CF2E /* DWImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWImageCache.h; sourceTree = "<group>"; };
-		EAF43D5C111D101900A7CF2E /* DWImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWImageCache.m; sourceTree = "<group>"; };
+		EAF43D5B111D101900A7CF2E /* DWCachedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWCachedImageView.h; sourceTree = "<group>"; };
+		EAF43D5C111D101900A7CF2E /* DWCachedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWCachedImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,18 +123,22 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EAF43D5B111D101900A7CF2E /* DWCachedImageView.h */,
+				EAF43D5C111D101900A7CF2E /* DWCachedImageView.m */,
 				1D3623240D0F684500981E51 /* iPadDrinkAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iPadDrinkAppDelegate.m */,
 				EADBA6FC111AB9FA00DB6429 /* MachineBriefController.h */,
 				EADBA6FD111AB9FA00DB6429 /* MachineBriefController.m */,
 				EA45AD0F111D49D5001AA8CC /* MachineBriefView.h */,
 				EA45AD10111D49D5001AA8CC /* MachineBriefView.m */,
+				EA45AD27111D6963001AA8CC /* MachineDetailViewController.h */,
+				EA45AD28111D6963001AA8CC /* MachineDetailViewController.m */,
+				EA45AD7C111E6F20001AA8CC /* MachineEditViewController.h */,
+				EA45AD7D111E6F20001AA8CC /* MachineEditViewController.m */,
 				EADBA76B111BC05F00DB6429 /* MachinePickerController.h */,
 				EADBA76C111BC05F00DB6429 /* MachinePickerController.m */,
 				EAF43C5B111BFEB400A7CF2E /* RowColumnView.h */,
 				EAF43C5C111BFEB400A7CF2E /* RowColumnView.m */,
-				EAF43D5B111D101900A7CF2E /* DWImageCache.h */,
-				EAF43D5C111D101900A7CF2E /* DWImageCache.m */,
 			);
 			name = Classes;
 			path = iPadDrink;
@@ -167,6 +181,8 @@
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				EADBA6F9111AB86D00DB6429 /* MachineBrief.xib */,
 				EADBA76E111BC0BC00DB6429 /* MachinePicker.xib */,
+				EA45AD29111D6963001AA8CC /* MachineDetail.xib */,
+				EA45AD7E111E6F20001AA8CC /* MachineEdit.xib */,
 			);
 			name = "Resources-iPad";
 			sourceTree = "<group>";
@@ -273,6 +289,8 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				EADBA6FA111AB86D00DB6429 /* MachineBrief.xib in Resources */,
 				EADBA76F111BC0BC00DB6429 /* MachinePicker.xib in Resources */,
+				EA45AD2B111D6963001AA8CC /* MachineDetail.xib in Resources */,
+				EA45AD80111E6F20001AA8CC /* MachineEdit.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,8 +321,10 @@
 				EADBA6FE111AB9FA00DB6429 /* MachineBriefController.m in Sources */,
 				EADBA76D111BC05F00DB6429 /* MachinePickerController.m in Sources */,
 				EAF43C5D111BFEB400A7CF2E /* RowColumnView.m in Sources */,
-				EAF43D5D111D101900A7CF2E /* DWImageCache.m in Sources */,
+				EAF43D5D111D101900A7CF2E /* DWCachedImageView.m in Sources */,
 				EA45AD11111D49D5001AA8CC /* MachineBriefView.m in Sources */,
+				EA45AD2A111D6963001AA8CC /* MachineDetailViewController.m in Sources */,
+				EA45AD7F111E6F20001AA8CC /* MachineEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,7 @@
 //  iPadDrink
 //
 //  Created by Dan Willemsen on 2/4/10.
-//  Copyright 2010 Apple Inc. All rights reserved.
+//  Copyright 2010 Dan Willemsen. All rights reserved.
 //
 
 #import "RowColumnView.h"

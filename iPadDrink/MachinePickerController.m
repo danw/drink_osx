@@ -47,9 +47,9 @@
     [contentView release];
 }
 
--(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    if (UIInterfaceOrientationIsLandscape([self interfaceOrientation]))
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
     {
         [contentView setMode:RowColumnView_COLUMNS];
     }

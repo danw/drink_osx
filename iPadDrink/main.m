@@ -3,7 +3,7 @@
 //  iPadDrink
 //
 //  Created by Dan Willemsen on 2/3/10.
-//  Copyright Apple Inc 2010. All rights reserved.
+//  Copyright Dan Willemsen 2010. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

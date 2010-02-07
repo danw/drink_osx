@@ -8,14 +8,18 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "DCMachine.h"
+#import "DWCachedImageView.h"
 
 @interface MachineBriefController : UIViewController {
-    UIImageView *imageView;
+    DWCachedImageView *imageView;
     UILabel *nameLabel;
+    
+    UIPopoverController *currentPopover;
+    
     DCMachine *machine;
 }
 
-@property (nonatomic,retain) IBOutlet UIImageView *imageView;
+@property (nonatomic,retain) IBOutlet DWCachedImageView *imageView;
 @property (nonatomic,retain) IBOutlet UILabel *nameLabel;
 @property (nonatomic,retain) DCMachine *machine;
 

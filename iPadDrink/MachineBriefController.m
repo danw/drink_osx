@@ -6,7 +6,9 @@
 //
 
 #import "MachineBriefController.h"
-#import "DWImageCache.h"
+#import "iPadDrinkAppDelegate.h"
+#import "MachineDetailViewController.h"
+#import "MachineEditViewController.h"
 
 @implementation MachineBriefController
 
@@ -33,13 +35,54 @@
                  context:nil];
     [nameLabel setText:[machine name]];
 
-    [DWImageCache cacheImageFromURL:[NSURL URLWithString:@"http://www.csh.rit.edu/~dan/drink_machine.jpg"]
-                                                 forView:imageView];
+    [imageView setImageURL:[NSURL URLWithString:@"http://www.csh.rit.edu/~dan/drink_machine.jpg"]];
+    
+    currentPopover = nil;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
+    tap.numberOfTapsRequired = 1;
+    [imageView addGestureRecognizer:tap];
+    [tap release];
+    
+    UILongPressGestureRecognizer *long_tap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongTap)];
+    [[self view] addGestureRecognizer:long_tap];
+    [long_tap release];
+}
+
+-(void)handleTap
+{
+    iPadDrinkAppDelegate *d = (iPadDrinkAppDelegate*)[[UIApplication sharedApplication] delegate];
+    MachineDetailViewController *vc = [[MachineDetailViewController alloc] initWithMachine:machine];
+    
+    NSLog(@"handleTap");
+    
+    [[d navControl] pushViewController:vc animated:YES];
+    [vc release];
+}
+
+-(void)handleLongTap
+{
+    if (currentPopover != nil && [currentPopover isPopoverVisible]) return;
+    
+    MachineEditViewController *vc = [[MachineEditViewController alloc] initWithMachine:machine];
+    
+    if (currentPopover == nil)
+        currentPopover = [[UIPopoverController alloc] initWithContentViewController:vc];
+    else 
+        [currentPopover setContentViewController:vc];
+    
+//    currentPopover.delegate = self;
+    [currentPopover presentPopoverFromRect:[imageView frame]
+                                    inView:[self view]
+                  permittedArrowDirections:UIPopoverArrowDirectionAny
+                                  animated:YES];
+    [vc release];
 }
 
 -(void)viewDidUnload
 {
     [machine removeObserver:self forKeyPath:@"name"];
+    [currentPopover release];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
