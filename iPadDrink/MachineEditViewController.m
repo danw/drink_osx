@@ -35,6 +35,33 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [machine addObserver:self
+              forKeyPath:@"name"
+                 options:0 
+                 context:nil];
+    [machine addObserver:self
+              forKeyPath:@"password"
+                 options:0
+                 context:nil];
+    [machine addObserver:self
+              forKeyPath:@"publicIP"
+                 options:0
+                 context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"name"])
+    {
+    }
+    else if ([keyPath isEqualToString:@"password"])
+    {
+    }
+    else if ([keyPath isEqualToString:@"publicIP"])
+    {
+    }
+
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -71,7 +98,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
 {
-    return 2;
+    return 1;
 }
 
 - (BOOL) tableView:(UITableView*)tableView canEditRowAtIndexPath:(NSIndexPath*)indexPath
@@ -90,15 +117,35 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil)
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId] autorelease];
     }
-    cell.textLabel.text = machine.name;
+    
+    if ([indexPath row] == 0)
+    {
+        cell.textLabel.text = @"Name";
+        cell.detailTextLabel.text = machine.name;
+    }
+    else if ([indexPath row] == 1)
+    {
+        cell.textLabel.text = @"Password";
+        cell.detailTextLabel.text = machine.password;
+    }
+    else if ([indexPath row] == 2)
+    {
+        cell.textLabel.text = @"Public IP";
+        cell.detailTextLabel.text = machine.publicIP;
+    }
     return cell;
+}
+
+- (NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [NSString stringWithFormat:@"ID: %@", machine.machineID];
 }
 
 - (NSInteger) tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 @end
