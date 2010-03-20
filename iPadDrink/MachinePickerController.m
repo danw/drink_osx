@@ -18,7 +18,8 @@
 {
     NSUInteger i;
  
-    briefs = [NSMutableArray array];
+    briefs = [[NSMutableArray array] retain];
+    self.title = @"Machines";
  
     conn = [(iPadDrinkAppDelegate*)[[UIApplication sharedApplication] delegate] conn];
     

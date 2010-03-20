@@ -20,7 +20,7 @@ static NSMutableDictionary* images = nil;
     @synchronized(images)
     {
         if (images == nil)
-            images = [NSMutableDictionary dictionary];
+            images = [[NSMutableDictionary dictionary] retain];
     }
     
     [url retain];

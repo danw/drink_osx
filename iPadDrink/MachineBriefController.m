@@ -45,7 +45,7 @@
     [tap release];
     
     UILongPressGestureRecognizer *long_tap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongTap)];
-    [[self view] addGestureRecognizer:long_tap];
+    [imageView addGestureRecognizer:long_tap];
     [long_tap release];
 }
 
