@@ -84,6 +84,17 @@
                               @"192.168.1.3", @"public_ip",
                               [NSNumber numberWithFloat:40.2f], @"temperature",
                               nil];
+    NSDictionary *machine7 = [NSDictionary dictionaryWithObjectsAndKeys:
+                              @"m7", @"machineid",
+                              [NSNumber numberWithInt:0], @"admin_only",
+                              [NSNumber numberWithInt:1], @"allow_connect",
+                              [NSNumber numberWithInt:1], @"available_sensor",
+                              @"192.168.1.3", @"machine_ip",
+                              @"Machine7", @"name",
+                              @"MachinePassword", @"password",
+                              @"192.168.1.3", @"public_ip",
+                              [NSNumber numberWithFloat:40.2f], @"temperature",
+                              nil];
     
     [delegate drinkServerDidConnect];
     [delegate drinkServerGotCurrentUser:user];
@@ -96,6 +107,7 @@
     [delegate drinkServerGotMachine:machine4];
     [delegate drinkServerGotMachine:machine5];
     [delegate drinkServerGotMachine:machine6];
+    [delegate drinkServerGotMachine:machine7];
 }
 
 -(void)close
