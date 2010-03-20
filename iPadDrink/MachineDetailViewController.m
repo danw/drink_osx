@@ -36,11 +36,26 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     [imageView setImageURL:[NSURL URLWithString:@"http://www.csh.rit.edu/~dan/drink_machine.jpg"]];
+    
+    [machine addObserver:self
+              forKeyPath:@"name"
+                 options:0
+                 context:nil];
+    
+    self.title = [machine name];
     [labelView setText:[machine name]];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"name"])
+    {
+        [labelView setText:[machine name]];
+        self.title = [machine name];
+    }
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Override to allow orientations other than the default portrait orientation.

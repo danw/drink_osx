@@ -37,12 +37,12 @@
 {
     if (conn.connected)
     {
-        NSString *newTitle = [NSString stringWithFormat:@"User: %@ Credits: %@", [[conn currentUser] username], [[conn currentUser] credits]];
-        [[navControl visibleViewController] setTitle:newTitle];
+        //        NSString *newTitle = [NSString stringWithFormat:@"User: %@ Credits: %@", [[conn currentUser] username], [[conn currentUser] credits]];
+        //        [[navControl visibleViewController] setTitle:newTitle];
     }
     else
     {
-        [[navControl visibleViewController] setTitle:@"Disconnected"];
+        //        [[navControl visibleViewController] setTitle:@"Disconnected"];
     }
 
 }
