@@ -68,10 +68,31 @@
 -(void)handleEvent:(NSString *)event data:(NSDictionary *)data
 {
 	NSLog(@"Got event %@ with data %@", event, data);
-	if ([event isEqualToString:@"machine"])
+	if ([event isEqualToString:@"machine_added"])
 	{
 		[delegate drinkServerGotMachine:data];
+    }
+    else if ([event isEqualToString:@"machine_modified"])
+    {
+        [delegate drinkServerGotMachine:data];
+    }
+    else if ([event isEqualToString:@"machine_deleted"])
+    {
+        [delegate drinkServerMachineRemoved:[data objectForKey:@"machineid"]];
+    }
+    else if ([event isEqualToString:@"user_changed"])
+    {
+        // TODO
+    }
+    else if ([event isEqualToString:@"hello"])
+    {
+        [self writeRequest:@"machines" withID:@"machines" args:nil];
+        [self writeRequest:@"currentuser" withID:@"currentuser" args:nil];
 	}
+    else
+    {
+        NSLog(@"Warning: unhandled event: %@", event);
+    }
 }
 
 -(void)handleResponse:(NSString*)r_id status:(NSString*)status data:(id)data
