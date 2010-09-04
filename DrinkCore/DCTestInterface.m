@@ -13,22 +13,22 @@
 
 -(void)connect
 {
-    NSDictionary *user = [NSDictionary dictionaryWithObjectsAndKeys:
-                          @"inituser", @"username",
-                          [NSNumber numberWithInt:300], @"credits",
-                          [NSNumber numberWithInt:0], @"admin", 
-                          nil];
-    NSDictionary *machine = [NSDictionary dictionaryWithObjectsAndKeys:
-                             @"mid", @"machineid",
-                             [NSNumber numberWithInt:0], @"admin_only",
-                             [NSNumber numberWithInt:1], @"allow_connect",
-                             [NSNumber numberWithInt:1], @"available_sensor",
-                             @"192.168.1.3", @"machine_ip",
-                             @"MachineName", @"name",
-                             @"MachinePassword", @"password",
-                             @"192.168.1.3", @"public_ip",
-                             [NSNumber numberWithFloat:40.2f], @"temperature",
-                             nil];
+    user = [[NSMutableDictionary dictionaryWithObjectsAndKeys:
+            @"inituser", @"username",
+            [NSNumber numberWithInt:300], @"credits",
+            [NSNumber numberWithInt:0], @"admin", 
+            nil] retain];
+    machine = [[NSMutableDictionary dictionaryWithObjectsAndKeys:
+               @"mid", @"machineid",
+               [NSNumber numberWithInt:0], @"admin_only",
+               [NSNumber numberWithInt:1], @"allow_connect",
+               [NSNumber numberWithInt:1], @"available_sensor",
+               @"192.168.1.3", @"machine_ip",
+               @"MachineName", @"name",
+               @"MachinePassword", @"password",
+               @"192.168.1.3", @"public_ip",
+               [NSNumber numberWithFloat:40.2f], @"temperature",
+               nil] retain];
     NSDictionary *machine2 = [NSDictionary dictionaryWithObjectsAndKeys:
                               @"little", @"machineid",
                               [NSNumber numberWithInt:0], @"admin_only",
@@ -108,10 +108,34 @@
     [delegate drinkServerGotMachine:machine5];
     [delegate drinkServerGotMachine:machine6];
     [delegate drinkServerGotMachine:machine7];
+
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+}
+
+-(void)timerFired:(NSTimer*)theTimer
+{
+    NSNumber *num = [user objectForKey:@"credits"];
+    uint32_t credits = [num intValue];
+    credits = (credits + 50) % 300;
+    [user setValue:[NSNumber numberWithInt:credits] forKey:@"credits"];
+    [delegate drinkServerGotCurrentUser:user];
+    
+    NSString *name = [machine objectForKey:@"name"];
+    if ([name isEqualToString:@"MachineName"])
+    {
+        name = @"Mach Name 2";
+    }
+    else
+    {
+        name = @"MachineName";
+    }
+    [machine setValue:name forKey:@"name"];
+    [delegate drinkServerGotMachine:machine];
 }
 
 -(void)close
 {
+    [timer invalidate];
     [delegate drinkServerDidDisconnect];
 }
 

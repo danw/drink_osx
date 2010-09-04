@@ -10,9 +10,12 @@
 #import "DCConnection.h"
 
 @interface DCTestInterface : DCConnectionInterface {
+    NSTimer *timer;
+    NSDictionary *user, *machine;
 }
 
 -(void)connect;
+-(void)timerFired:(NSTimer*)theTimer;
 -(void)close;
 
 @end
