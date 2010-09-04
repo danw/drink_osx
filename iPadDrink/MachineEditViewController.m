@@ -48,18 +48,26 @@
               forKeyPath:@"publicIP"
                  options:0
                  context:nil];
+    NSLog(@"Self: %@", self);
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
+    [tableView reloadData]; return;
     if ([keyPath isEqualToString:@"name"])
     {
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathWithIndex:0]]
+                         withRowAnimation:UITableViewRowAnimationFade];
     }
     else if ([keyPath isEqualToString:@"password"])
     {
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathWithIndex:1]]
+                         withRowAnimation:UITableViewRowAnimationFade];
     }
     else if ([keyPath isEqualToString:@"publicIP"])
     {
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathWithIndex:2]]
+                         withRowAnimation:UITableViewRowAnimationFade];
     }
 
 }
@@ -78,6 +86,10 @@
 }
 
 - (void)viewDidUnload {
+    [machine removeObserver:self forKeyPath:@"name"];
+    [machine removeObserver:self forKeyPath:@"password"];
+    [machine removeObserver:self forKeyPath:@"publicIP"];
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -85,6 +97,7 @@
 
 
 - (void)dealloc {
+    [self viewDidUnload];
     [super dealloc];
 }
 
@@ -111,7 +124,7 @@
     return NO;
 }
 
-- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell*) tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellId = @"MyCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];

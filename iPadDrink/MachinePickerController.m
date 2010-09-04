@@ -39,6 +39,18 @@
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+	if (UIInterfaceOrientationIsPortrait([self interfaceOrientation]))
+		[contentView setMode:RowColumnView_ROWS];
+	else
+		[contentView setMode:RowColumnView_COLUMNS];
+	
+	[contentView setNeedsLayout];
+	
+	[(UIScrollView*)[self view] setContentSize:[contentView frame].size];
+}
+
 -(void)viewDidUnload
 {
     [conn removeObserver:self forKeyPath:@"machines"];

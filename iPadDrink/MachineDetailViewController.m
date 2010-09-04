@@ -72,6 +72,9 @@
 
 
 - (void)viewDidUnload {
+    NSLog(@"View did unload");
+    [machine removeObserver:self forKeyPath:@"name"];
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -79,6 +82,7 @@
 
 
 - (void)dealloc {
+    [self viewDidUnload];
     [super dealloc];
 }
 

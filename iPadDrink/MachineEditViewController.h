@@ -11,6 +11,7 @@
 
 @interface MachineEditViewController : UIViewController <UITableViewDataSource> {
     DCMachine *machine;
+    IBOutlet UITableView *tableView;
 }
 
 -(id)initWithMachine:(DCMachine*)m;
