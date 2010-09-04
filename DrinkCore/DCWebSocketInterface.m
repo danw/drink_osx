@@ -82,6 +82,7 @@
 		for (id machine in dict) {
 			[delegate drinkServerGotMachine:[dict objectForKey:machine]];
 		}
+        // TODO: remove machines from delegate?
 	}
     else if ([r_id isEqualToString:@"currentuser"])
     {
@@ -148,8 +149,6 @@
 					 tag:0];
 	
 	[delegate drinkServerDidConnect];
-	[self writeRequest:@"machines" withID:@"machines" args:nil];
-    [self writeRequest:@"currentuser" withID:@"currentuser" args:nil];
 }
 
 -(void)onSocket:(AsyncSocket *)socket didReadData:(NSData *)packet withTag:(long)tag
