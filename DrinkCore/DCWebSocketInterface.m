@@ -192,4 +192,13 @@
 	NSLog(@"Will disconnect: %@", err);
 }
 
+- (NSTimeInterval)onSocket:(AsyncSocket *)sock
+  shouldTimeoutReadWithTag:(long)tag
+				   elapsed:(NSTimeInterval)elapsed
+				 bytesDone:(CFIndex)length
+{
+    // TODO: handle this better
+    return 60;
+}
+
 @end
