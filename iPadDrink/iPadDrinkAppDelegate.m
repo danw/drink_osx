@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {	
-    NSURL *url = [NSURL URLWithString:@"test://dan@192.168.1.3:42080"];
+    NSURL *url = [NSURL URLWithString:@"ws://admin@mini.danw.org:42080"];
     conn = [[DCConnection alloc] initWithURL:url];
     
     [conn addObserver:self
